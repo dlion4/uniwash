@@ -1,0 +1,23 @@
+{
+    "cSpell.words": [
+        "allauth",
+        "anymail",
+        "autobuild",
+        "cffi",
+        "corsheaders",
+        "djangorestframework",
+        "djlint",
+        "gunicorn",
+        "hiredis",
+        "jeckonia",
+        "mypy",
+        "psycopg",
+        "pytest",
+        "SOCIALACCOUNT",
+        "uniwash",
+        "uvicorn",
+        "watchfiles",
+        "Werkzeug",
+        "whitenoise"
+    ]
+}

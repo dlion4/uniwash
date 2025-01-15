@@ -1,0 +1,4 @@
+name: uniwash
+scripts: {
+  installs: uv run pip-compile  .\requirements/local.in -o .\requirements.txt --no-strip-extras
+}
