@@ -478,7 +478,7 @@ werkzeug[watchdog]==3.0.3
     # via
     #   -r .\requirements/local.in
     #   werkzeug
-whitenoise==6.7.0
+whitenoise==6.8.2
     # via -r C:\Users\liont\OneDrive\Desktop\metronic\uniwash\requirements\base.in
 yarl==1.18.3
     # via aiohttp
