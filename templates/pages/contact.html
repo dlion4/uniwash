@@ -1,0 +1,168 @@
+{% extends "base.html" %} {% load static %}
+
+<!--  -->
+
+{% block banner %}
+    
+{% endblock banner %}
+    
+<!--  -->
+{% block content %}
+<!-- Contact section -->
+<div class="ld-contact-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="ld-choose-left ld-choose-center">
+        <h2>Get in Touch With Us</h2>
+        <h1>Contact Information</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="ld-add-box">
+          <div class="ld-icone">
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+          </div>
+          <h6>Post Address</h6>
+          <address>1927 Cottonwood Lane, MI 49505</address>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="ld-add-box">
+          <div class="ld-icone">
+            <i class="fa fa-phone" aria-hidden="true"></i>
+          </div>
+          <h6>Contact Phone</h6>
+          <address>+164017848287</address>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="ld-add-box">
+          <div class="ld-icone">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+          </div>
+          <h6>E-mail Address</h6>
+          <address>yourmail@mail.com</address>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="ld-add-box">
+          <div class="ld-icone">
+            <i class="fa fa-clock-o" aria-hidden="true"></i>
+          </div>
+          <h6>Opening Hours</h6>
+          <address>Mon-Fri 08:00 AM - 05:00 PM</address>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Contact section end-->
+
+<!-- map section -->
+<div class="ld-map-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-12">
+        <div class="ld-map">
+          <div style="width: 100%">
+            <iframe
+              width="100%"
+              height="600"
+              frameborder="0"
+              scrolling="no"
+              marginheight="0"
+              marginwidth="0"
+              src="https://maps.google.com/maps?width=100%25&height=600&hl=en&q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&t=&z=14&ie=UTF8&iwloc=B&output=embed"
+              ><a href="https://www.gps.ie/wearable-gps/"
+                >Kids wearables</a
+              ></iframe
+            >
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12">
+        <div class="ld-contact-white-form">
+          <h1>Send Message Us</h1>
+          <form
+            id="contactForm"
+            data-bs-toggle="validator"
+            class="was-validated"
+          >
+            <div class="row">
+              <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="ld-field_holder form_error">
+                  <input
+                    type="text"
+                    class="form-control pg-form_field require error"
+                    placeholder="Enter Your Name"
+                    name="full_name"
+                    id="name"
+                    required=""
+                  />
+                  <div class="help-block with-errors"></div>
+                </div>
+              </div>
+              <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="ld-field_holder">
+                  <input
+                    type="text"
+                    class="form-control pg-form_field require"
+                    placeholder="Enter Your Email"
+                    name="email"
+                    id="email"
+                    data-valid="email"
+                    data-error="Email should be valid."
+                    required=""
+                  />
+                  <div class="help-block with-errors"></div>
+                </div>
+              </div>
+              <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="ld-field_holder">
+                  <input
+                    type="text"
+                    class="form-control pg-form_field require"
+                    placeholder="Enter Your Subject"
+                    name="subject"
+                    id="subject"
+                    required=""
+                  />
+                  <div class="help-block with-errors"></div>
+                </div>
+              </div>
+              <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                <div class="ld-field_holder">
+                  <textarea
+                    placeholder="Enter Your Message..."
+                    class="form-control pg-form_field require"
+                    cols="3"
+                    rows="5"
+                    name="message"
+                    id="message"
+                    required=""
+                  ></textarea>
+                  <div class="help-block with-errors"></div>
+                </div>
+              </div>
+              <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                <button
+                  type="submit"
+                  class="vr_btn submitForm"
+                  id="form-submit"
+                >
+                  Submit
+                </button>
+                <!-- <div class="response">You missed out some fields.</div> -->
+                <div class="response"></div>
+              </div>
+            </div>
+            <div id="msgSubmit" class="h3 text-center hidden"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock content %}

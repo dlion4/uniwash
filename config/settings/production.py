@@ -151,37 +151,37 @@ ANYMAIL = {}
 # See https://docs.djangoproject.com/en/dev/topics/logging for
 # more details on how to customize your logging configuration.
 
-LOGGING = {
-    "version": 1,
-    "disable_existing_loggers": True,
-    "formatters": {
-        "verbose": {
-            "format": "%(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s",
-        },
-    },
-    "handlers": {
-        "console": {
-            "level": "DEBUG",
-            "class": "logging.StreamHandler",
-            "formatter": "verbose",
-        },
-    },
-    "root": {"level": "INFO", "handlers": ["console"]},
-    "loggers": {
-        "django.db.backends": {
-            "level": "ERROR",
-            "handlers": ["console"],
-            "propagate": False,
-        },
-        # Errors logged by the SDK itself
-        "sentry_sdk": {"level": "ERROR", "handlers": ["console"], "propagate": False},
-        "django.security.DisallowedHost": {
-            "level": "ERROR",
-            "handlers": ["console"],
-            "propagate": False,
-        },
-    },
-}
+# LOGGING = {
+#     "version": 1,
+#     "disable_existing_loggers": True,
+#     "formatters": {
+#         "verbose": {
+#             "format": "%(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s",
+#         },
+#     },
+#     "handlers": {
+#         "console": {
+#             "level": "DEBUG",
+#             "class": "logging.StreamHandler",
+#             "formatter": "verbose",
+#         },
+#     },
+#     "root": {"level": "INFO", "handlers": ["console"]},
+#     "loggers": {
+#         "django.db.backends": {
+#             "level": "ERROR",
+#             "handlers": ["console"],
+#             "propagate": False,
+#         },
+#         # Errors logged by the SDK itself
+#         "sentry_sdk": {"level": "ERROR", "handlers": ["console"], "propagate": False},
+#         "django.security.DisallowedHost": {
+#             "level": "ERROR",
+#             "handlers": ["console"],
+#             "propagate": False,
+#         },
+#     },
+# }
 
 # Sentry
 # ------------------------------------------------------------------------------
@@ -209,7 +209,7 @@ sentry_sdk.init(
 # -------------------------------------------------------------------------------
 # Tools that generate code samples can use SERVERS to point to the correct domain
 SPECTACULAR_SETTINGS["SERVERS"] = [
-    {"url": "https://localhost", "description": "Production server"},
+    {"url": "http://localhost", "description": "Production server"},
 ]
 # Your stuff...
 # ------------------------------------------------------------------------------

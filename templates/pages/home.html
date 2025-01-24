@@ -1,3 +1,241 @@
-{% extends "base.html" %}
+{% extends "base.html" %} {% load static i18n %}
+<!--  -->
+
+{% block content %}
+
+<div class="ld-about-wrapper" id="about">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-12">
+        <div class="ld-about-left">
+          <img src="{% static 'images/about.png' %}" alt="" />
+        </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12">
+        <div class="ld-about-right">
+          <h2>About Us</h2>
+          <h1>
+            We are Different in Laundry
+            <br />
+            & Cleaning Industry
+          </h1>
+          <p>
+            Consectetur adipiscing elit, sed do eiusmod tempor incididunt uesdt
+            labore rest dolore erqes magna andesd aliqua incididunt adipiscing
+            elit.
+          </p>
+          <p class="ld-about-right-top">
+            Adipisicing elit, sed do eiusmod tempor incididunt uet labore eeset
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo
+            consequat.
+          </p>
+          <a href="javascript:(0);" class="ld-all-btn1">Read More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ld-service-wrapper" id="services">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="ld-all-heading">
+          <h1>
+            Let’s explore our
+            <br />
+            services
+          </h1>
+        </div>
+      </div>
+    </div>
+    <div class="ld-services-box-section">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="ld-service-box">
+            <img src="{% static 'images/service1.png' %}" alt="" />
+            <h2>Householf Laundry</h2>
+            <p>
+              Consectetur adipiscing elit, sed do eiusmod tempor incididunt
+              uesdt labore rest dolore erqes magna andesd aliqua.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="ld-service-box">
+            <img src="{% static 'images/service2.png' %}" alt="" />
+            <h2>Dry cleaning</h2>
+            <p>
+              Many desktop publishing packages and web page editors now use
+              Lorem Ipsum as their default model text, and a search for.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="ld-service-box">
+            <img src="{% static 'images/service3.png' %}" alt="" />
+            <h2>Stain Removal</h2>
+            <p>
+              Various versions have evolved over the years, sometimes by
+              accident, sometimes on purpose injected humour and the like..
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ld-choose-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="ld-choose-left">
+          <h2>Why Choose Us</h2>
+          <h1>Provide on Time Delivery & Best Quality Laundry Services</h1>
+          <p>
+            Nor again is there anyone who loves or pursues or desires to obtain
+            pain of itself, because it is pain, but because occasionally
+            circumstances occur in which toil.
+          </p>
+          <div class="ld-choose-inner">
+            <div class="ld-choose-option1">
+              <img src="{% static 'images/icon1.png' %}" alt="" />
+              <div class="ld-choose-option1-text">
+                <h1>Drop Off Laundry</h1>
+                <p>
+                  To take a trivial example, which of us ever undertakes
+                  laborious physical exercise, except to
+                </p>
+              </div>
+            </div>
+            <div class="ld-choose-option1">
+              <img src="{% static 'images/icon2.png' %}" alt="" />
+              <div class="ld-choose-option1-text">
+                <h1>Online Booking</h1>
+                <p>
+                  right to find fault with a man who chooses to enjoy a pleasure
+                  that has no annoying consequences,
+                </p>
+              </div>
+            </div>
+          </div>
+          <a href="javascript:(0);" class="ld-all-btn1">Read More</a>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="ld-choose-img">
+          <img src="{% static 'images/choose.png' %}" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- happy client section -->
+<div class="ld-client-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="ld-all-heading">
+          <h1>What Our Happy Clients <br />Say About Us</h1>
+        </div>
+      </div>
+    </div>
+    <div class="ld-client-slider-wrapper">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="ld-client-slider-swiper">
+            <div class="swiper ld-client-slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="ld-client-box">
+                    <div class="ld-client-box-img">
+                      <img src="{% static 'images/client4.png' %}" alt="img" />
+                    </div>
+                    <div class="ld-client-box-text">
+                      <p>
+                        On the other hand, we denounce with righteous
+                        indignation and dislike men who are so beguiled and
+                        demoralized by the charms of pleasure of the moment, so
+                        blinded by desire, that they cannot foresee the pain and
+                        trouble that are bound to ensue.
+                      </p>
+                      <h2>David parker</h2>
+                    </div>
+                    <div class="ld-qoute-img">
+                      <img src="{% static 'images/quote.png' %}" alt="img" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- work section start -->
+<div class="ld-work-wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="ld-all-heading">
+          <h1>How we work</h1>
+        </div>
+      </div>
+    </div>
+    <div class="ld-work-inner">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="ld-work-box">
+            <img src="{% static 'images/work1.png' %}" alt="" />
+            <h5>STEP 01</h5>
+            <h2>Call Us</h2>
+            <p>ut aut reiciendis voluptatibus maiores alias consequatur aut.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="ld-work-box">
+            <img src="{% static 'images/work2.png' %}" alt="" />
+            <h5>STEP 02</h5>
+            <h2>We Collect</h2>
+            <p>These cases are perfectly simple and easy to distinguish.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="ld-work-box">
+            <img src="{% static 'images/work3.png' %}" alt="" />
+            <h5>STEP 03</h5>
+            <h2>We Clean</h2>
+            <p>Nam libero tempore, cum soluta nobis est eligendi optio.</p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          <div class="ld-work-box ld-work-box-border">
+            <img src="{% static 'images/work4.png' %}" alt="" />
+            <h5>STEP 04</h5>
+            <h2>We Deliver</h2>
+            <p>
+              sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- plan section end -->
+
+{% include "components/plans.html" %}
 
 
+
+<!-- blog section start -->
+{% include "components/blogs/list.html" %}
+<!--  -->
+{% endblock content %}

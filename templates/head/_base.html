@@ -1,0 +1,294 @@
+    <div class="mb-1">
+      <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <div class="container-fluid">
+          <button
+            class="navbar-toggler navbar-toggler-right"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="{% url 'home' %}">uniwash</a>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="{% url 'home' %}"
+                  >Home <span class="visually-hidden">(current)</span></a
+                >
+              </li>
+              {% if request.user.is_authenticated %}
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="{% url 'users:detail' request.user.pk %}"
+                  >{% translate "My Profile" %}</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'account_logout' %}"
+                  >{% translate "Sign Out" %}</a
+                >
+              </li>
+              {% else %} {% if ACCOUNT_ALLOW_REGISTRATION %}
+              <li class="nav-item">
+                <a
+                  id="sign-up-link"
+                  class="nav-link"
+                  href="{% url 'account_signup' %}"
+                  >{% translate "Sign Up" %}</a
+                >
+              </li>
+              {% endif %}
+              <li class="nav-item">
+                <a
+                  id="log-in-link"
+                  class="nav-link"
+                  href="{% url 'account_login' %}"
+                  >{% translate "Sign In" %}</a
+                >
+              </li>
+              {% endif %}
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="container">
+      {% if messages %} {% for message in messages %}
+      <div
+        class="alert alert-dismissible {% if message.tags %}alert-{{ message.tags }}{% endif %}"
+      >
+        {{ message }}
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="alert"
+          aria-label="Close"
+        ></button>
+      </div>
+      {% endfor %} {% endif %} {% block main %} {% block content %}
+      <p>Use this document as a way to quick start any new project.</p>
+      {% endblock content %} {% endblock main %}
+    </div>
+
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <meta
+      id="siteViewport"
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <link rel="profile" href="https://gmpg.org/xfn/11" />
+    <title>Wonderful Laundry &#8211; Uniwash</title>
+    <meta name="robots" content="max-image-preview:large" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Clena &raquo; Feed"
+      href=""
+    />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Clena &raquo; Comments Feed"
+      href=""
+    />
+    <script>
+      window._wpemojiSettings = {
+        baseUrl: "https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/72x72\/",
+        ext: ".png",
+        svgUrl: "https:\/\/s.w.org\/images\/core\/emoji\/15.0.3\/svg\/",
+        svgExt: ".svg",
+        source: {
+          concatemoji:
+            "{% static 'wp-includes/js/wp-emoji-release.min.js' %}?ver=6.5.3",
+        },
+      };
+    </script>
+    <style id="wp-emoji-styles-inline-css">
+      img.wp-smiley,
+      img.emoji {
+        display: inline !important;
+        border: none !important;
+        box-shadow: none !important;
+        height: 1em !important;
+        width: 1em !important;
+        margin: 0 0.07em !important;
+        vertical-align: -0.1em !important;
+        background: none !important;
+        padding: 0 !important;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      id="contact-form-7-css"
+      href='{% static "plugins/contact-form-7/includes/css/styles9bd2.css" %}?ver=5.9.4'
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="bootstrap-css"
+      href='{% static "themes/clena/assets/css/bootstrap84e2.css" %}?ver=1.00'
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="clena-css"
+      href='{% static "themes/clena/style84e2.css" %}?ver=1.00'
+      media="all"
+    />
+    <style id="clena-inline-css">
+      :root {
+        --accent-color: #14bec9;
+        --accent-color-hover: #88dd61;
+        --global-txt-color: #626993;
+
+        --button-txt-color: #ffffff;
+        --button-txt-color-hover: #ffffff;
+        --button-bg-color: #14bec9;
+        --button-bg-color-hover: #88dd61;
+
+        --header-menu-txt-color-first: #181a32;
+        --header-menu-txt-color-second: #ffffff;
+        --header-menu-txt-color-inner: #181a32;
+
+        --header-menu-sticky-bg-color-first: #ffffff;
+        --header-menu-sticky-bg-color-second: #000000;
+        --header-menu-sticky-bg-color-inner: #ffffff;
+
+        --header-cta-txt-color: #ffffff;
+        --header-cta-txt-color-hover: #181a32;
+        --header-cta-bg-color: #14bec9;
+        --header-cta-bg-color-hover: transparent;
+
+        --header-title-txt-color: #181a32;
+        --header-bg-overlay-color: #ffffff;
+        --logo-height: 40px;
+
+        --footer-txt-color: #181a32;
+        --footer-bg-color: #e1f8fa;
+      }
+      .entry-categories {
+        display: none;
+      }
+      :root {
+        --blog-tile-excerpt-display: none;
+      }
+      #main-header {
+        background-attachment: fixed;
+      }
+      :root {
+        --header-menu-position: center;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      id="elementor-icons-css"
+      href='{% static "plugins/elementor/assets/lib/eicons/css/elementor-icons.mind54b.css" %}?ver=5.29.0'
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="elementor-frontend-css"
+      href='{% static "plugins/elementor/assets/css/frontend-lite.min63aa.css" %}?ver=3.21.5'
+      media="all"
+    />
+
+    <link rel="stylesheet" href="{% static 'css/main.css' %}" />
+    <link
+      rel="stylesheet"
+      id="swiper-css"
+      href='{% static "plugins/elementor/assets/lib/swiper/v8/css/swiper.min94a4.css" %}?ver=8.4.5'
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="eael-general-css"
+      href='{% static "plugins/essential-addons-for-elementor-lite/assets/front-end/css/view/general.min2173.css" %}?ver=5.9.20'
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="google-fonts-1-css"
+      href="https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CLexend+Deca%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7COutfit%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;display=auto&amp;ver=6.5.3"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="elementor-icons-shared-0-css"
+      href='{% static "plugins/elementor/assets/lib/font-awesome/css/fontawesome.min52d5.css" %}?ver=5.15.3'
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      id="elementor-icons-fa-solid-css"
+      href='{% static "plugins/elementor/assets/lib/font-awesome/css/solid.min52d5.css" %}?ver=5.15.3'
+      media="all"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <script
+      src="{% static 'wp-includes/js/jquery/jquery.minf43b.js' %}?ver=3.7.1"
+      id="jquery-core-js"
+    ></script>
+    <script
+      src="{% static 'wp-includes/js/jquery/jquery-migrate.min5589.js' %}?ver=3.4.1"
+      id="jquery-migrate-js"
+    ></script>
+    <script
+      src="{% static 'themes/clena/assets/js/bootstrap.bundle.min84e2.js' %}?ver=1.00"
+      id="bootstrap-js"
+    ></script>
+    <script id="clena-js-before">
+      if (screen.width >= 1535 && screen.width < 2561) {
+        let mvp = document.getElementById("siteViewport");
+        mvp.setAttribute("content", "width=1920");
+      }
+      if (screen.width > 767 && screen.width < 1535) {
+        let mvp = document.getElementById("siteViewport");
+        mvp.setAttribute("content", "width=1700");
+      }
+    </script>
+    <script
+      src="{% static 'themes/clena/assets/js/index84e2.js' %}?ver=1.00"
+      id="clena-js"
+    ></script>
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="" />
+    <link rel="canonical" href="{% url 'home' %}" />
+    <link rel="shortlink" href="" />
+    <link
+      rel="alternate"
+      type="application/json+oembed"
+      href="{% static 'wp-json/oembed/1.0/embedf78c.json' %}?url=https%3A%2F%2Fclena.peerduck.com%2Fwonderful-laundry%2F"
+    />
+    <link
+      rel="alternate"
+      type="text/xml+oembed"
+      href="{% static 'wp-json/oembed/1.0/embed69aa' %}?url=https%3A%2F%2Fclena.peerduck.com%2Fwonderful-laundry%2F&amp;format=xml"
+    />
+    <meta
+      name="generator"
+      content="Elementor 3.21.5; features: e_optimized_assets_loading, e_optimized_css_loading, additional_custom_breakpoints; settings: css_print_method-internal, google_font-enabled, font_display-auto"
+    />
+    <link
+      rel="icon"
+      href="{% static 'uploads/2023/06/cropped-fav-150x150.png' %}"
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      href="{% static 'uploads/2023/06/cropped-fav-300x300.png' %}"
+      sizes="192x192"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="{% static 'uploads/2023/06/cropped-fav-300x300.png' %}"
+    />
+    <meta
+      name="msapplication-TileImage"
+      content="https://clena.peerduck.com/wp-content/uploads/2023/06/cropped-fav-300x300.png"
+    />
+
+    <link rel="stylesheet" href="{% static 'css/with-delivery.css' %}">

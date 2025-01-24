@@ -1,0 +1,50 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/style.css' %}" />
+<link
+  rel="stylesheet"
+  id="swiper-css"
+  href='{% static "lib/swiper/v8/css/swiper.min.css" %}?ver=8.4.5'
+  media="all"
+/>
+<link
+  rel="stylesheet"
+  id="eael-general-css"
+  href='{% static "css/general.min.css" %}?ver=5.9.20'
+  media="all"
+/>
+<link
+  rel=" stylesheet"
+  id="elementor-icons-shared-0-css"
+  href='{% static "lib/font-awesome/css/fontawesome.min.css" %}?ver=5.15.3'
+  media="all"
+/>
+<link
+  rel="stylesheet"
+  id="elementor-icons-fa-solid-css"
+  href='{% static "lib/font-awesome/css/solid.min.css" %}?ver=5.15.3'
+  media="all"
+/>
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+<script
+  src="{% static 'js/jquery/jquery.min.js' %}?ver=3.7.1"
+  id="jquery-core-js"
+></script>
+<script
+  src="{% static 'js/jquery/jquery-migrate.min.js' %}?ver=3.4.1"
+  id="jquery-migrate-js"
+></script>
+<script
+  src="{% static 'js/bootstrap.bundle.min.js' %}?ver=1.00"
+  id="bootstrap-js"
+></script>
+<script id="clena-js-before">
+  if (screen.width >= 1535 && screen.width < 2561) {
+    let mvp = document.getElementById("siteViewport");
+    mvp.setAttribute("content", "width=1920");
+  }
+  if (screen.width > 767 && screen.width < 1535) {
+    let mvp = document.getElementById("siteViewport");
+    mvp.setAttribute("content", "width=1700");
+  }
+</script>
+<script src="{% static 'js/index.js' %}?ver=1.00" id="clena-js"></script>
