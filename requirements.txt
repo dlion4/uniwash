@@ -140,7 +140,7 @@ django-crispy-forms==2.3
     # via
     #   -r C:\Users\liont\OneDrive\Desktop\metronic\uniwash\requirements\base.in
     #   crispy-bootstrap5
-django-debug-toolbar==4.4.6
+django-debug-toolbar==5.0.1
     # via -r .\requirements/local.in
 django-environ==0.11.2
     # via -r C:\Users\liont\OneDrive\Desktop\metronic\uniwash\requirements\base.in
