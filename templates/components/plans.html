@@ -17,19 +17,24 @@
             <table class="table table-borderless">
               <thead>
                 <tr>
-                  <th>Garments</th>
-                  <th>Dry Cleaning</th>
-                  <th>Steam Ironing</th>
-                  <th>Wash & Iron</th>
+                  {% for item in item_services_price %}
+                  <th>{{item}}</th>
+                  {% endfor %}
                 </tr>
               </thead>
               <tbody>
+                {% for item in item_services_price %}
+                <!--  -->
+                {% for dt in item.get_pricing_item %}
                 <tr>
-                  <td>Bath Towel Large</td>
-                  <td><img src="{% static 'images/green.png' %}" alt="" /></td>
+                  <td>{{item.item}}</td>
+                  <td>{{dt.price}}</td>
                   <td><img src="{% static 'images/cross.png' %}" alt="" /></td>
                   <td><img src="{% static 'images/green.png' %}" alt="" /></td>
                 </tr>
+                {% endfor %}
+                <!--  -->
+                {% endfor %}
               </tbody>
             </table>
           </div>
