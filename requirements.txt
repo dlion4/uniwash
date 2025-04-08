@@ -463,7 +463,7 @@ virtualenv==20.28.1
     # via pre-commit
 watchdog==6.0.0
     # via werkzeug
-watchfiles==0.21.0
+watchfiles==1.0.5
     # via
     #   -r .\requirements/local.in
     #   sphinx-autobuild
